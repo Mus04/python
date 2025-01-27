@@ -1,0 +1,15 @@
+def sum_matrix(matrix):
+    total_sum = 0
+    for row in matrix:
+        total_sum += sum(int(num) for num in row)
+    return total_sum
+rows = int(input())
+matrix = []
+for i in range(rows):
+    row = [int(item) for item in input().split()]
+    matrix.append(row)
+print("Matrix:")
+for row in matrix:
+    print(row)
+matrix_sum = sum_matrix(matrix)
+print(f"The sum of all elements in the matrix is: {matrix_sum}")
